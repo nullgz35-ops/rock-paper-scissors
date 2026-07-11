@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice () {    //pilihan 
     let randomNumber = Math.floor (Math.random() * 3);
     let computerChoice;
@@ -16,39 +19,30 @@ function getHumanChoice() {
 }
 
 function playRound (humanChoice, computerChoice) {   //penentu
-   if (humanChoice === "batu" && computerChoice === "gunting"){
+   if (humanChoice === "batu" && computerChoice === "gunting"){ humanScore++;
         return humanChoice + " vs " + computerChoice + ' menang'
-    } else if (humanChoice === "gunting" && computerChoice === "kertas"){
+    } else if (humanChoice === "gunting" && computerChoice === "kertas"){humanScore++;
         return humanChoice + " vs " + computerChoice + " menang"
-    } else if (humanChoice === "kertas" && computerChoice === "batu"){
+    } else if (humanChoice === "kertas" && computerChoice === "batu"){humanScore++;
         return humanChoice + " vs " + computerChoice + ' menang'
     } else if (humanChoice === computerChoice){
         return humanChoice + " vs " + computerChoice + " seri"
     } else {
+        computerScore++;
         return humanChoice + " vs " + computerChoice + " kalah"
     }
 }
 
 function playGame (){ 
-    let playerScore = 0;
-    let computerScore = 0;
-
     for (let i=0; i<5; i++){
         let humanChoice = getHumanChoice ()
         let computerChoice = getComputerChoice ()
         let hasil = playRound(humanChoice, computerChoice)
         console.log (hasil)
-
-        if (hasil.includes ("menang")){  //score
-            playerScore = playerScore +1;
-        } else if (hasil.includes("kalah")){
-            computerScore = computerScore +1;
-        } else if (hasil.includes ("seri")){
-        }
     }
-    if (playerScore > computerScore){
+    if (humanScore> computerScore){
         console.log ("player menang!")
-    } else if (playerScore < computerScore){
+    } else if (humanScore < computerScore){
         console.log ("Player kalah!")
     } else {
         console.log ("Seri!")
