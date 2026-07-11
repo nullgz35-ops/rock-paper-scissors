@@ -19,6 +19,7 @@ function getHumanChoice() {
 }
 
 function playRound (humanChoice, computerChoice) {   //penentu
+    humanChoice = humanChoice.toLowerCase ();
    if (humanChoice === "batu" && computerChoice === "gunting"){ humanScore++;
         return humanChoice + " vs " + computerChoice + ' menang'
     } else if (humanChoice === "gunting" && computerChoice === "kertas"){humanScore++;
