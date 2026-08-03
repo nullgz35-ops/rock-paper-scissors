@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+
+body {
+    background-color: #5a9e3a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#computer-display,  #player-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255,  255, 0);
+    border: 3px dased white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    margin: 10px auto;
+}
+
+#computer-display p, #player-display p{
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#computer-display img, #player-display img{
+    width:150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+#computer-display img {
+    transform: rotate(180deg);
+}
+
+#result {
+    background-color: #f0c040;
+    color: #333;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 15px;
+}
+
+#score {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 10px;
+    text-align: center;
+}
+
+#buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#buttons button{
+    background-color: #f0c040;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#buttons button:hover {
+    background-color: #e0b030;
+}
+
+#computer-score {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 10px;
+    text-align: center;
+}

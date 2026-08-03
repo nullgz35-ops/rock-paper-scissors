@@ -49,6 +49,7 @@ function handleChoice(humanChoice) {
     computerImg.src = computerChoice + ".png";
     resultDisplay.textContent = result;
     scoreDisplay.textContent = "Your score: " + humanScore;
+    document.querySelector("#computer-score").textContent="Computer score: " + computerScore;
 }
 
 rockBtn.addEventListener("click", function() {
