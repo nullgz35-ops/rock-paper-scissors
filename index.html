@@ -2,11 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
-    <script src="./script.js" defer></script>
+
+    <div id="computer-display">
+        <p>Computer</p>
+        <img id="computer-img" src="" alt="computer choice">
+    </div>
+
+    <div id="result">-</div>
+
+    <div id="player-display">
+        <p>Player</p>
+        <img id="player-img" src="" alt="player choice">
+    </div>
+
+    <div id="score">Your score: 0</div>
+
+    <div id="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
